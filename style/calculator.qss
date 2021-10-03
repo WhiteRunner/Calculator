@@ -1,0 +1,22 @@
+QLineEdit {
+    font-size: 60px
+}
+
+QPushButton {
+    font-size: 60px
+}
+
+QPushButton#C {
+    font-size: 60px;
+    color: rgb(255, 127, 0)
+}
+
+QPushButton#equal {
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 127, 0)
+}
+
+QPushButton#sqrt {
+    font-size: 40px
+}
