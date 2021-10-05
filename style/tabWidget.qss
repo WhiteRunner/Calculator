@@ -1,0 +1,38 @@
+QWidget{
+    background: white;
+    font-family: 微软雅黑;
+}
+
+QTabWidget::pane {
+    border:none ;
+}
+
+QTabWidget::tab-bar {
+    /*background: red;*/
+    /*subcontrol-position: center;*/
+}
+
+
+QTabBar{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+QTabBar::tab {
+    min-width: 100px;
+    min-height: 30px;
+    color: rgb(102, 158, 133);
+    background-color: white;
+}
+
+QTabBar::tab:selected {
+    color: rgb(255, 127, 0);
+    /*抵消自动向上移动*/
+    margin-top: 1px;
+}
+
+
+QTabBar::tab:hover {
+    color: rgb(255, 127, 0);
+    /*background: transparent;*/
+}
