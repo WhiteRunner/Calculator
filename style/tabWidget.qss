@@ -1,6 +1,10 @@
 QWidget{
-    background: white;
+    /*background: white;*/
     font-family: 微软雅黑;
+}
+
+QTabWidget{
+    background: white;
 }
 
 QTabWidget::pane {
