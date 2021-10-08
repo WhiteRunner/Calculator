@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="tab3">
+    <file>leftArrow.png</file>
+    <file>rightArrow.png</file>
+  </qresource>
+</RCC>
