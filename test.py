@@ -1,7 +1,5 @@
 import datetime
 
-from athletics_function import *
-
 # 测试50m/60m/100m
 # print(cal_50m_score(10,-2,30))
 # print(cal_60m_score(10,-2,30))

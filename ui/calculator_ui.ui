@@ -422,16 +422,16 @@
     <attribute name="title">
      <string>短跑硬实力计算</string>
     </attribute>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>22</y>
        <width>611</width>
        <height>751</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout" stretch="3,0,7,1">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <property name="spacing">
        <number>30</number>
       </property>
@@ -448,43 +448,10 @@
        <number>30</number>
       </property>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,0">
-        <property name="spacing">
-         <number>20</number>
-        </property>
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="rightMargin">
-         <number>0</number>
-        </property>
-        <property name="bottomMargin">
-         <number>0</number>
-        </property>
-        <item>
-         <layout class="QFormLayout" name="formLayout">
-          <property name="sizeConstraint">
-           <enum>QLayout::SetDefaultConstraint</enum>
-          </property>
-          <property name="fieldGrowthPolicy">
-           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-          </property>
-          <property name="rowWrapPolicy">
-           <enum>QFormLayout::DontWrapRows</enum>
-          </property>
-          <property name="formAlignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-          <property name="horizontalSpacing">
-           <number>15</number>
-          </property>
-          <property name="verticalSpacing">
-           <number>28</number>
-          </property>
-          <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,2">
+          <item>
            <widget class="QLabel" name="label">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -497,7 +464,7 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item>
            <widget class="QComboBox" name="length">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -535,7 +502,38 @@
             </item>
            </widget>
           </item>
-          <item row="1" column="0">
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_20">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>风速(m/s)</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignLeft">
+           <widget class="QLineEdit" name="windSpeed">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="1,2">
+          <item>
            <widget class="QLabel" name="label_2">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -548,13 +546,13 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item>
            <widget class="QComboBox" name="lane">
             <property name="enabled">
              <bool>true</bool>
             </property>
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -601,7 +599,38 @@
             </item>
            </widget>
           </item>
-          <item row="2" column="0">
+         </layout>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_19">
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>海拔(m)</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignLeft">
+           <widget class="QLineEdit" name="altitude">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="1,2">
+          <item>
            <widget class="QLabel" name="label_3">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -614,7 +643,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item>
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
              <widget class="QRadioButton" name="men">
@@ -647,116 +676,14 @@
             </item>
            </layout>
           </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_4">
-            <property name="enabled">
-             <bool>true</bool>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>原始成绩(s)</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QLineEdit" name="oldScore">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-           </widget>
-          </item>
          </layout>
         </item>
-        <item>
-         <layout class="QFormLayout" name="formLayout_2">
-          <property name="sizeConstraint">
-           <enum>QLayout::SetDefaultConstraint</enum>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="0,1">
+          <property name="spacing">
+           <number>30</number>
           </property>
-          <property name="fieldGrowthPolicy">
-           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-          </property>
-          <property name="rowWrapPolicy">
-           <enum>QFormLayout::DontWrapRows</enum>
-          </property>
-          <property name="labelAlignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
-          <property name="formAlignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-          <property name="horizontalSpacing">
-           <number>0</number>
-          </property>
-          <property name="verticalSpacing">
-           <number>26</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_5">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>风速(m/s)</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="windSpeed">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_6">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>海拔(m)</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="altitude">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
+          <item>
            <widget class="QLabel" name="label_7">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -769,7 +696,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <property name="spacing">
              <number>15</number>
@@ -784,6 +711,9 @@
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QComboBox::AdjustToContents</enum>
               </property>
              </widget>
             </item>
@@ -805,21 +735,63 @@
             </item>
            </layout>
           </item>
-          <item row="3" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <item alignment="Qt::AlignHCenter">
-             <widget class="QPushButton" name="fixScore">
-              <property name="text">
-               <string>计算</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,4">
+          <property name="spacing">
+           <number>15</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>原始成绩(s)</string>
+            </property>
+           </widget>
           </item>
-          <item row="3" column="0">
+          <item alignment="Qt::AlignRight">
+           <widget class="QLineEdit" name="oldScore">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,1">
+          <property name="spacing">
+           <number>15</number>
+          </property>
+          <item>
            <widget class="QPushButton" name="resetFix">
             <property name="text">
              <string>重置</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="fixScore">
+            <property name="text">
+             <string>计算</string>
             </property>
            </widget>
           </item>
@@ -1656,54 +1628,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>length</sender>
-   <signal>currentIndexChanged(QString)</signal>
-   <receiver>Form</receiver>
-   <slot>handleFixScore()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>287</x>
-     <y>96</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-116</x>
-     <y>81</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>resetFix</sender>
-   <signal>clicked()</signal>
-   <receiver>Form</receiver>
-   <slot>handleFixScore()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>354</x>
-     <y>220</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>700</x>
-     <y>234</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>fixScore</sender>
-   <signal>clicked()</signal>
-   <receiver>Form</receiver>
-   <slot>handleFixScore()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>550</x>
-     <y>247</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>797</x>
-     <y>285</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>tabWidget</sender>
    <signal>currentChanged(int)</signal>
    <receiver>Form</receiver>
@@ -1716,38 +1640,6 @@
     <hint type="destinationlabel">
      <x>-174</x>
      <y>284</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>raceName</sender>
-   <signal>currentIndexChanged(QString)</signal>
-   <receiver>Form</receiver>
-   <slot>handleFixScore()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>497</x>
-     <y>191</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>731</x>
-     <y>122</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>year</sender>
-   <signal>currentIndexChanged(int)</signal>
-   <receiver>Form</receiver>
-   <slot>handleFixScore()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>599</x>
-     <y>191</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>717</x>
-     <y>158</y>
     </hint>
    </hints>
   </connection>
@@ -1940,6 +1832,86 @@
     <hint type="destinationlabel">
      <x>535</x>
      <y>898</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>length</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>handleFixScore()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>287</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-116</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>raceName</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>handleFixScore()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>497</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>731</x>
+     <y>122</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetFix</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>handleFixScore()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>354</x>
+     <y>220</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>700</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fixScore</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>handleFixScore()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>550</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>797</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>year</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>Form</receiver>
+   <slot>handleFixScore()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>599</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>717</x>
+     <y>158</y>
     </hint>
    </hints>
   </connection>
