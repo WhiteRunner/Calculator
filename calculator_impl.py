@@ -1,10 +1,9 @@
-from PyQt5.Qt import *
 from PyQt5 import QtGui
 from ui.calculator_ui import Ui_Form
 from ui.raceData import raceData
-from athletics_function import *
+from utils.athletics_function import *
 from ui.myWidget import *
-# from .resources_rc import *
+from utils.file_path import *
 import datetime
 
 
@@ -64,6 +63,8 @@ class Window(QWidget, Ui_Form):
 
     # 关联数据库,展示两张表
     def showTableView(self):
+        # 0.切换到exe解压到的临时目录/工程目录
+        os.chdir(tmd)
         # 1.创建并连接数据库
         self.database = QSqlDatabase.addDatabase('QSQLITE')
         self.database.setDatabaseName('./db/record.db')
@@ -113,6 +114,8 @@ class Window(QWidget, Ui_Form):
             self.equal.releaseKeyboard()
 
     def set_style(self):
+        # 0.切换工作目录
+        os.chdir(tmd)
         # 启用对背景的样式设置
         self.tabWidget.setAttribute(Qt.WA_StyledBackground)
         # 设置表格头的名字(用于qss)
@@ -122,9 +125,9 @@ class Window(QWidget, Ui_Form):
         for item in self.tabWidget.findChildren(QComboBox):
             item.setView(QListView())
         # 加载qss样式
-        with open(r"style\tabWidget.qss", "r", encoding='utf8') as f1, \
-                open(r"style\calculator.qss", "r", encoding='utf8') as f2, \
-                open(r"style\calScore.qss", "r", encoding='utf8') as f3:
+        with open(r"style/tabWidget.qss", "r", encoding='utf8') as f1, \
+                open(r"style/calculator.qss", "r", encoding='utf8') as f2, \
+                open(r"style/calScore.qss", "r", encoding='utf8') as f3:
             self.setStyleSheet(f1.read())
             self.tab1.setStyleSheet(f2.read())
             f3=f3.read()
@@ -169,12 +172,14 @@ class Window(QWidget, Ui_Form):
                     row_values.append(str(model.record(i).value(j)))
                 output.append(' '.join(row_values))
             # 导出文件
+            os.chdir(cwd) # 切换到当前所在路径
             result = QFileDialog.getSaveFileName(self, "选择导出路径", "./", "文本文件(*.txt)", "文本文件(*.txt)")
             path = result[0]
-            with open(path, 'w') as f:
-                for s in output:
-                    f.write(s + '\n')
-            QMessageBox.information(self, '保存状态', '保存成功')
+            if path != '':
+                with open(path, 'w') as f:
+                    for s in output:
+                        f.write(s + '\n')
+                QMessageBox.information(self, '保存状态', '保存成功')
 
 
     '''
@@ -288,6 +293,7 @@ class Window(QWidget, Ui_Form):
             self.oldScore.setText("")
             self.raceName.setCurrentIndex(0)
             self.year.setCurrentIndex(0)
+            self.men.setChecked(True)
         elif self.sender() == self.raceName:
             yearData = raceData[val]
             # 阻止clear动作发出信号
@@ -375,6 +381,8 @@ class Window(QWidget, Ui_Form):
             self.doubleScore1.setValue(0)
             self.score2.setText("")
             self.points.setText("")
+            self.men1.setChecked(True)
+            self.men2.setChecked(True)
         elif self.sender()==self.compareScore:
             # 1.计算项目1的points
             points=0
