@@ -1,6 +1,6 @@
 from PyQt5.Qt import *
 import sys
-from ui import Window
+from calculator_impl import Window
 
 # 创建一个应用程序对象
 app = QApplication(sys.argv)

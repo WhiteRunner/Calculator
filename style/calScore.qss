@@ -154,6 +154,11 @@
 /*    background-color: aqua;*/
 /*}*/
 
+/*!*计算出的修正成绩*!*/
+/*QLabel#correctedScore{*/
+/*    color: blue;*/
+/*}*/
+
 
 
 
@@ -233,4 +238,46 @@
 /*    right: 3px;*/
 /*    top: 2px;*/
 /*    bottom:4px;*/
+/*}*/
+
+
+
+
+
+
+/*QTimeEdit, QDoubleSpinBox {*/
+/*    !*居中*!*/
+/*    qproperty-alignment: 'AlignHCenter| AlignVCenter';*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*}*/
+
+/*!*上(右)按钮*!*/
+/*QTimeEdit::up-button, QDoubleSpinBox::up-button {*/
+/*    subcontrol-origin: border;*/
+/*    background: none;*/
+/*    subcontrol-position: right;*/
+/*    image: url(:/tab3/rightArrow.png);*/
+/*    width: 28px;*/
+/*    height: 28px;*/
+/*}*/
+
+/*!*上按钮按下样式*!*/
+/*QTimeEdit::up-button:pressed, QDoubleSpinBox::up-button:pressed {*/
+/*    !*自己写按钮的样式*!*/
+/*}*/
+
+/*!*下(左)按钮*!*/
+/*QTimeEdit::down-button, QDoubleSpinBox::down-button {*/
+/*    subcontrol-origin: border;*/
+/*    background: none;*/
+/*    subcontrol-position: left;*/
+/*    image: url(:/tab3/leftArrow.png);*/
+/*    width: 28px;*/
+/*    height: 28px;*/
+/*}*/
+
+/*!*下按钮按下样式*!*/
+/*QTimeEdit::down-button:pressed, QDoubleSpinBox::down-button:pressed {*/
+
 /*}*/

@@ -4,6 +4,7 @@ from ui.calculator_ui import Ui_Form
 from ui.raceData import raceData
 from athletics_function import *
 from ui.myWidget import *
+# from .resources_rc import *
 import datetime
 
 
@@ -126,8 +127,9 @@ class Window(QWidget, Ui_Form):
                 open(r"style\calScore.qss", "r", encoding='utf8') as f3:
             self.setStyleSheet(f1.read())
             self.tab1.setStyleSheet(f2.read())
-            self.tab2.setStyleSheet(f3.read())
-            self.tab3.setStyleSheet(f3.read())
+            f3=f3.read()
+            self.tab2.setStyleSheet(f3)
+            self.tab3.setStyleSheet(f3)
 
 
     # 处理对表格操作的通用槽函数
@@ -371,6 +373,8 @@ class Window(QWidget, Ui_Form):
             self.event2.setCurrentIndex(0)
             self.timeScore1.setTime(QTime(0,0))
             self.doubleScore1.setValue(0)
+            self.score2.setText("")
+            self.points.setText("")
         elif self.sender()==self.compareScore:
             # 1.计算项目1的points
             points=0

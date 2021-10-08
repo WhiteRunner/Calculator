@@ -627,7 +627,7 @@ class Ui_Form(object):
         self.tabWidget.addTab(self.tab3, "")
 
         self.retranslateUi(Form)
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(1)
         self.length.setCurrentIndex(2)
         self.pushButton.clicked.connect(Form.clickBtnOnCalculator)
         self.pushButton_2.clicked.connect(Form.clickBtnOnCalculator)
@@ -767,6 +767,7 @@ class Ui_Form(object):
         self.outputData2.setText(_translate("Form", "导出数据"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab3), _translate("Form", "跨赛事对比"))
 from .myWidget import EqualBtn
+import resources_rc
 
 
 if __name__ == "__main__":
