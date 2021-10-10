@@ -3,4 +3,7 @@
     <file>leftArrow.png</file>
     <file>rightArrow.png</file>
   </qresource>
+  <qresource prefix="icon">
+    <file>c.ico</file>
+  </qresource>
 </RCC>

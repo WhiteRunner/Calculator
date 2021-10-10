@@ -7,11 +7,21 @@
     <x>0</x>
     <y>0</y>
     <width>660</width>
-    <height>823</height>
+    <height>807</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>580</width>
+    <height>700</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>田径计算器</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/resources.qrc">
+    <normaloff>:/icon/c.ico</normaloff>:/icon/c.ico</iconset>
   </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
@@ -422,12 +432,12 @@
     <attribute name="title">
      <string>短跑硬实力计算</string>
     </attribute>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>20</x>
        <y>22</y>
-       <width>611</width>
+       <width>634</width>
        <height>751</height>
       </rect>
      </property>
@@ -450,7 +460,7 @@
       <item>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,2">
+         <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="3,5">
           <item>
            <widget class="QLabel" name="label">
             <property name="sizePolicy">
@@ -471,6 +481,11 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox QAbstractItemView {
+    font-size: 18px
+}</string>
             </property>
             <property name="currentIndex">
              <number>2</number>
@@ -505,7 +520,7 @@
          </layout>
         </item>
         <item row="0" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout_20">
+         <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="3,5">
           <item>
            <widget class="QLabel" name="label_5">
             <property name="sizePolicy">
@@ -519,10 +534,10 @@
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignLeft">
+          <item>
            <widget class="QLineEdit" name="windSpeed">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -532,7 +547,7 @@
          </layout>
         </item>
         <item row="1" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="1,2">
+         <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="3,5">
           <item>
            <widget class="QLabel" name="label_2">
             <property name="sizePolicy">
@@ -556,6 +571,11 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox QAbstractItemView {
+    font-size: 18px
+}</string>
             </property>
             <item>
              <property name="text">
@@ -602,7 +622,7 @@
          </layout>
         </item>
         <item row="1" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout_19">
+         <layout class="QHBoxLayout" name="horizontalLayout_19" stretch="3,5">
           <item>
            <widget class="QLabel" name="label_6">
             <property name="sizePolicy">
@@ -616,10 +636,10 @@
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignLeft">
+          <item>
            <widget class="QLineEdit" name="altitude">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -629,7 +649,7 @@
          </layout>
         </item>
         <item row="2" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="1,2">
+         <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="3,5">
           <item>
            <widget class="QLabel" name="label_3">
             <property name="sizePolicy">
@@ -712,6 +732,11 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="styleSheet">
+               <string notr="true">QComboBox QAbstractItemView {
+    font-size: 18px
+}</string>
+              </property>
               <property name="sizeAdjustPolicy">
                <enum>QComboBox::AdjustToContents</enum>
               </property>
@@ -728,6 +753,11 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="styleSheet">
+               <string notr="true">QComboBox QAbstractItemView {
+    font-size: 18px
+}</string>
+              </property>
               <property name="sizeAdjustPolicy">
                <enum>QComboBox::AdjustToContents</enum>
               </property>
@@ -738,9 +768,9 @@
          </layout>
         </item>
         <item row="3" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,4">
+         <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="3,5">
           <property name="spacing">
-           <number>15</number>
+           <number>8</number>
           </property>
           <item>
            <widget class="QLabel" name="label_4">
@@ -758,7 +788,7 @@
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignRight">
+          <item>
            <widget class="QLineEdit" name="oldScore">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -831,6 +861,16 @@
       </item>
       <item>
        <widget class="QTableView" name="fixScoreView">
+        <property name="styleSheet">
+         <string notr="true">QHeaderView {
+    background-color: white;   
+}
+QHeaderView::section {
+    background-color: white;
+    border-radius:0px;
+    margin-left: 10px;
+}</string>
+        </property>
         <property name="editTriggers">
          <set>QAbstractItemView::NoEditTriggers</set>
         </property>
@@ -850,7 +890,7 @@
         <property name="spacing">
          <number>50</number>
         </property>
-        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+        <item alignment="Qt::AlignVCenter">
          <widget class="QPushButton" name="delSelected">
           <property name="minimumSize">
            <size>
@@ -869,7 +909,7 @@
           </property>
          </widget>
         </item>
-        <item alignment="Qt::AlignHCenter">
+        <item>
          <widget class="QPushButton" name="clear">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -907,7 +947,7 @@
           </property>
          </widget>
         </item>
-        <item alignment="Qt::AlignHCenter">
+        <item>
          <widget class="QPushButton" name="outputData">
           <property name="text">
            <string>导出数据</string>
@@ -984,6 +1024,11 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox QAbstractItemView {
+    font-size: 18px
+}</string>
             </property>
            </widget>
           </item>
@@ -1076,7 +1121,7 @@
          </layout>
         </item>
         <item row="2" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="1,4">
           <property name="spacing">
            <number>50</number>
           </property>
@@ -1125,14 +1170,19 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox QAbstractItemView {
+    font-size: 18px
+}</string>
+            </property>
            </widget>
           </item>
          </layout>
         </item>
         <item row="3" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="1,4">
           <property name="spacing">
-           <number>58</number>
+           <number>49</number>
           </property>
           <item>
            <widget class="QLabel" name="label_12">
@@ -1190,6 +1240,16 @@
       </item>
       <item>
        <widget class="QTableView" name="compareScoreView">
+        <property name="styleSheet">
+         <string notr="true">QHeaderView {
+    background-color: white;   
+}
+QHeaderView::section {
+    background-color: white;
+    border-radius:0px;
+    margin-left: 10px;
+}</string>
+        </property>
         <property name="editTriggers">
          <set>QAbstractItemView::NoEditTriggers</set>
         </property>
@@ -1205,12 +1265,18 @@
        </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="1,1,1,1">
         <property name="spacing">
          <number>50</number>
         </property>
-        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+        <item alignment="Qt::AlignVCenter">
          <widget class="QPushButton" name="delSelected2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -1228,10 +1294,10 @@
           </property>
          </widget>
         </item>
-        <item alignment="Qt::AlignHCenter">
+        <item>
          <widget class="QPushButton" name="clear2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1261,13 +1327,25 @@
         </item>
         <item>
          <widget class="QPushButton" name="refresh2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>刷新</string>
           </property>
          </widget>
         </item>
-        <item alignment="Qt::AlignHCenter">
+        <item>
          <widget class="QPushButton" name="outputData2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>导出数据</string>
           </property>

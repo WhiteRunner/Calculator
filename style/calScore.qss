@@ -1,283 +1,119 @@
-/*QTableView {*/
-/*    color: white;                                       !*表格内文字颜色*!*/
-/*    gridline-color: black;                              !*表格内框颜色*!*/
-/*    background-color: rgb(108, 108, 108);               !*奇数行背景色*!*/
-/*    alternate-background-color: rgb(64, 64, 64);        !*偶数行背景色*!*/
-/*    selection-color: white;                             !*选中区域的文字颜色*!*/
-/*    selection-background-color: rgb(77, 77, 77);        !*选中区域的背景色*!*/
-/*    border: 2px groove gray;*/
-/*    border-radius: 0px;*/
-/*    padding: 2px 4px;*/
-/*}*/
+QTableView {
+    selection-color: black;                   /*选中区域的文字颜色*/
+    selection-background-color: rgb(181, 226, 194);        /*选中区域的背景色*/
+    font-size: 16px;
+}
 
 /*QHeaderView {*/
-/*    color: white;*/
-/*    font: bold 10pt;*/
-/*    background-color: rgb(108, 108, 108);               !*设置表头空白区域背景色*!*/
-/*    border: 0px solid rgb(144, 144, 144);*/
-/*    border:0px solid rgb(191,191,191);*/
-/*    border-left-color: rgba(255, 255, 255, 0);*/
-/*    border-top-color: rgba(255, 255, 255, 0);*/
-/*    border-radius:0px;*/
-/*    min-height:29px;*/
+/*    background-color: white;              !*设置表头空白区域背景色*!*/
 /*}*/
 
 /*QHeaderView::section {*/
-/*    color: white;*/
-/*    background-color: rgb(64, 64, 64);*/
-/*    border: 5px solid #f6f7fa;*/
-/*    border-radius:0px;*/
-/*    border-color: rgb(64, 64, 64);*/
-/*}*/
-
-/*QHeaderView#fix_hHeader::section {*/
-/*    height:40px;*/
-/*}*/
-/*QHeaderView#fix_vHeader::section {*/
-/*    width:30px;*/
-/*}*/
-
-/*!*QTableView 左上角样式*!*/
-/*QTableView QTableCornerButton::section {*/
-/*    color: red;*/
-/*    background-color: rgb(64, 64, 64);*/
-/*    border: 5px solid #f6f7fa;*/
-/*    border-radius:0px;*/
-/*    border-color: rgb(64, 64, 64);*/
-/* }*/
-
-
-
-
-
-/*QPushButton {*/
-/*    font-size: 60px;*/
-/*    color: rgb(102, 158, 133);*/
-/*    background-color: rgb(198, 224, 205);*/
-/*    border-radius: 6px*/
-/*}*/
-
-/*QPushButton:hover{*/
-/*    color: rgb(255, 127, 0)*/
-/*}*/
-
-/*QPushButton:pressed {*/
-/*    background-color: rgb(181, 226, 194);*/
-/*    border: None;*/
-/*}*/
-
-
-
-
-
-/*!*未下拉时，QComboBox 样式 背景黑色*!*/
-/*QComboBox {*/
-/*    border: none;*/
-/*    background: #000000;*/
-/*    color: #ffffff;*/
-/*    padding-left: 30px;*/
-/*    font-size: 16px "SimHei";*/
-/*}*/
-
-/*!*下拉后的整个下拉窗体样式 背景红色*!*/
-/*QComboBox QAbstractItemView {*/
-/*    background: #ff0000;*/
-/*    color: #ffffff;*/
-/*    padding-left: 30px;*/
-/*}*/
-
-/*!*下拉箭头区域样式*!*/
-/*QComboBox::drop-down {*/
-/*    width: 40px;*/
-/*    border-left: 1px solid #ffffff;*/
-/*}*/
-
-/*!*下拉箭头样式*!*/
-/*QComboBox::down-arrow {*/
-/*    image: url(:/xiala.png);*/
-/*    height: 30px;*/
-/*    width: 20px;*/
-/*}*/
-
-/*!*以下三个需要在代码中设置  comboBox.setView(QListView())  *!*/
-
-/*!*下拉项样式 背景蓝色*!*/
-/*QListView::item {*/
-/*    padding-left: 30px;*/
-/*    background: #0000ff;*/
-/*    color: #ffffff;*/
-/*}*/
-
-/*!*下拉项选中样式 背景绿色*!*/
-/*QListView::item:selected {*/
-/*    color: #DCDCDC;*/
-/*    background: #00ff00;*/
-/*}*/
-
-
-/*!*下拉项鼠标悬浮样式 背景灰绿色*!*/
-/*QListView::item:hover {*/
-/*    color: #DCDCDC;*/
-/*    background: #3da79d;*/
-/*}*/
-
-
-
-
-
-/*QLabel {*/
 /*    font-size: 18px;*/
-/*    color: #BDC8E2;*/
-/*    font-style: normal;*/
-/*    font-weight: normal;*/
-
-/*    border-style: solid;*/
-/*    border-width: 2px;*/
-/*    border-color: aqua;*/
-/*    border-radius: 20px;*/
-
-/*    padding-left: 20px;*/
-/*    padding-top: 0px;*/
-
-/*    background-color: #2E3648;*/
 /*}*/
 
-/*QLabel:hover{*/
-/*	color: red;*/
-/*	border-color: green;*/
-/*    background-color: aqua;*/
-/*}*/
+QTableView::item::selected{
+    background-color: rgb(181, 226, 194);
+}
 
-/*QLabel:disabled{*/
-/*	color: blue;*/
-/*	border-color: brown;*/
-/*    background-color: aqua;*/
-/*}*/
-
-/*!*计算出的修正成绩*!*/
-/*QLabel#correctedScore{*/
-/*    color: blue;*/
-/*}*/
+QHeaderView::section {
+    background-color: white;
+    border-radius:0px;
+    margin-left: 10px;
+}
 
 
 
 
+QPushButton {
+    font-size: 18px;
 
-/*QLineEdit {*/
-/*	!* 外边框 *!*/
-/*	border:2px solid red;*/
-/*	!* 倒角 *!*/
-/*	border-radius: 10px;*/
-/*	!*  内边框:上下和左右的距离*!*/
-/*	padding: 10 8px;*/
-/*	!* 背景色 *!*/
-/*	background: yellow;*/
-/*	!* 选中高亮背色 *!*/
-/*	selection-background-color:blue;*/
-/*	min-width:200px;*/
-/*	min-height:40px;*/
-/*}*/
-
-/*!* 密码模式 *!*/
-/*QLineEdit[echoMode="2"] {*/
-/*	lineedit-password-character:9679;*/
-/*}*/
-
-/*!* 当是只读模式时 *!*/
-/*QLineEdit:read-only {*/
-/*	background:red;*/
-/*}*/
-
-
-
-
-
-/*QRadioButton {*/
-/*    font-size: 14px;*/
-/*    color: #BDC8E2;*/
-/*    font-style: italic;*/
-/*    font-weight: bold;*/
-
-/*    spacing: 5px;*/
-/*    padding-left: 3px;*/
-/*    padding-top: 0px;*/
-
-/*    border-style: solid;*/
-/*    border-width: 2px;*/
-/*    border-color: aqua;*/
-
-/*    border-radius: 20px;*/
-
-/*    background-color: #2E3648;*/
-/*}*/
-
-/*QRadioButton:hover{*/
-/*	color: red;*/
-/*	border-color: green;*/
-/*    background-color: aqua;*/
-/*}*/
-
-/*QRadioButton:pressed{*/
-/*	color: green;*/
-/*	border-color: blueviolet;*/
-/*    background-color: black;*/
-/*}*/
-
-/*QRadioButton:disabled{*/
-/*	color: black;*/
-/*	border-color: gray;*/
-/*    background-color: gray;*/
-/*}*/
-
-/*QRadioButton::indicator {*/
-/*    width: 32px;*/
-/*    height: 18px;*/
-
-/*    position: relative;*/
-/*    left: 0px;*/
-/*    right: 3px;*/
-/*    top: 2px;*/
-/*    bottom:4px;*/
-/*}*/
+}
 
 
 
 
 
 
-/*QTimeEdit, QDoubleSpinBox {*/
-/*    !*居中*!*/
-/*    qproperty-alignment: 'AlignHCenter| AlignVCenter';*/
-/*    width: 30px;*/
-/*    height: 30px;*/
-/*}*/
 
-/*!*上(右)按钮*!*/
-/*QTimeEdit::up-button, QDoubleSpinBox::up-button {*/
-/*    subcontrol-origin: border;*/
-/*    background: none;*/
-/*    subcontrol-position: right;*/
-/*    image: url(:/tab3/rightArrow.png);*/
-/*    width: 28px;*/
-/*    height: 28px;*/
-/*}*/
+/*未下拉时，QComboBox 样式 背景黑色*/
+QComboBox {
 
-/*!*上按钮按下样式*!*/
-/*QTimeEdit::up-button:pressed, QDoubleSpinBox::up-button:pressed {*/
-/*    !*自己写按钮的样式*!*/
-/*}*/
+    font-size: 18px
+}
 
-/*!*下(左)按钮*!*/
-/*QTimeEdit::down-button, QDoubleSpinBox::down-button {*/
-/*    subcontrol-origin: border;*/
-/*    background: none;*/
-/*    subcontrol-position: left;*/
-/*    image: url(:/tab3/leftArrow.png);*/
-/*    width: 28px;*/
-/*    height: 28px;*/
-/*}*/
+/*下拉后的整个下拉窗体样式 背景红色*/
+QComboBox QAbstractItemView {
 
-/*!*下按钮按下样式*!*/
-/*QTimeEdit::down-button:pressed, QDoubleSpinBox::down-button:pressed {*/
+    font-size: 18px
+}
 
-/*}*/
+
+
+
+
+
+
+QLabel {
+    font-size: 18px;
+}
+
+
+/*计算出的修正成绩*/
+QLabel#correctedScore{
+    color: red;
+    font-size: 25px;
+}
+
+
+
+
+
+QLineEdit {
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+QRadioButton {
+    font-size: 18px;
+}
+
+
+
+
+
+
+QTimeEdit, QDoubleSpinBox {
+    /*居中*/
+    qproperty-alignment: 'AlignHCenter| AlignVCenter';
+    width: 100px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    font-size: 17px;
+}
+
+/*上(右)按钮*/
+QTimeEdit::up-button, QDoubleSpinBox::up-button {
+    subcontrol-origin: border;
+    background: none;
+    subcontrol-position: right;
+    image: url(:/tab3/rightArrow.png);
+    width: 20px;
+    height: 20px;
+}
+
+/*下(左)按钮*/
+QTimeEdit::down-button, QDoubleSpinBox::down-button {
+    subcontrol-origin: border;
+    background: none;
+    subcontrol-position: left;
+    image: url(:/tab3/leftArrow.png);
+    width: 20px;
+    height: 20px;
+}

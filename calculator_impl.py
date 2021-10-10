@@ -1,4 +1,8 @@
 from PyQt5 import QtGui
+from PyQt5.QtCore import QTime
+from PyQt5.QtSql import QSqlDatabase
+from PyQt5.QtWidgets import QWidget, QDoubleSpinBox, QSizePolicy, QButtonGroup, QHeaderView, QListView, QComboBox, \
+    QMessageBox, QFileDialog
 from ui.calculator_ui import Ui_Form
 from ui.raceData import raceData
 from utils.athletics_function import *
@@ -131,9 +135,8 @@ class Window(QWidget, Ui_Form):
             self.setStyleSheet(f1.read())
             self.tab1.setStyleSheet(f2.read())
             f3=f3.read()
-            self.tab2.setStyleSheet(f3)
             self.tab3.setStyleSheet(f3)
-
+            self.tab2.setStyleSheet(f3)
 
     # 处理对表格操作的通用槽函数
     def handleView(self,sender,delBtn,clearBtn,refreshBtn,outputBtn,model,view):
@@ -294,6 +297,7 @@ class Window(QWidget, Ui_Form):
             self.raceName.setCurrentIndex(0)
             self.year.setCurrentIndex(0)
             self.men.setChecked(True)
+            self.correctedScore.setText("")
         elif self.sender() == self.raceName:
             yearData = raceData[val]
             # 阻止clear动作发出信号

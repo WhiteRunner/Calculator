@@ -1,7 +1,10 @@
 import typing
 
 from PyQt5 import QtCore
-from PyQt5.Qt import *
+# from PyQt5.Qt import *
+from PyQt5.QtCore import Qt
+from PyQt5.QtSql import QSqlTableModel
+from PyQt5.QtWidgets import QPushButton
 
 
 class EqualBtn(QPushButton):
