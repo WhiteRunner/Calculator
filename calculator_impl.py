@@ -36,7 +36,7 @@ class Window(QWidget, Ui_Form):
         self.inUseScore1=self.timeScore1
         # 创建输入浮点数的score1
         self.doubleScore1=QDoubleSpinBox()
-        self.doubleScore1.setSuffix('米')
+        # self.doubleScore1.setSuffix('米')
         self.doubleScore1.setSizePolicy(QSizePolicy.Expanding,QSizePolicy.Fixed)
         # 添加下拉框选项
         events = [['100m', '100m'], ['200m', '200m'], ['400m', '400m'], ['800m', '800m'], ['1000m', '1000m'],
@@ -193,6 +193,7 @@ class Window(QWidget, Ui_Form):
     5.可使用括号
     6.数字过多会缩小字体,最后禁止输入,数字减少会恢复字体大小
     7.整数不会显示x.0的形式
+    8.运算发生异常保持原样
     '''
     def clickBtnOnCalculator(self):
 
@@ -256,9 +257,10 @@ class Window(QWidget, Ui_Form):
 
     '''
     1.输入项目,道次,性别,原始成绩,风速和海拔,计算真实成绩
-    2.可选择比赛项目和年份自动填入风速和海拔
+    2.可选择比赛项目、年份和项目自动填入风速和海拔
     3.将计算出来的成绩保存到数据库,并显示在表格中
-    4.表格可以删除选中列,清空,刷新,导出数据
+    4.表格可以删除选中列(可多选),清空,刷新,导出数据到txt
+    5.遇到异常会弹出提示文本
     '''
     def handleFixScore(self, val):
         # print(val)
@@ -286,6 +288,8 @@ class Window(QWidget, Ui_Form):
             #     self.windSpeed.setEnabled(True)
             if val == '400m':
                 self.windSpeed.setEnabled(False)
+            else:
+                self.windSpeed.setEnabled(True)
             if val == '100m':
                 self.windSpeed.setText(self.factorData[0])
             elif val == '200m':
@@ -374,7 +378,7 @@ class Window(QWidget, Ui_Form):
                 self.score1Layout.replaceWidget(self.inUseScore1,self.doubleScore1)
                 self.inUseScore1 = self.doubleScore1
                 self.doubleScore1.show()
-                self.scoreLabel1.setText("成绩1")
+                self.scoreLabel1.setText("成绩1(米)")
         elif self.sender() == self.event2:
             self.autoChecked(self.event2, val, self.men2, self.women2)
         elif self.sender() == self.resetCompare:

@@ -27,29 +27,22 @@ QHeaderView::section {
 
 QPushButton {
     font-size: 18px;
-
 }
 
 
 
 
-
-
-
-/*未下拉时，QComboBox 样式 背景黑色*/
 QComboBox {
 
     font-size: 18px
 }
+
 
 /*下拉后的整个下拉窗体样式 背景红色*/
 QComboBox QAbstractItemView {
 
     font-size: 18px
 }
-
-
-
 
 
 
